@@ -1,0 +1,74 @@
+<html>
+    <meta charset="utf-8"/>
+    <body>
+        <input type="text" id="play" onclick=player()>
+    </body>
+    <script>
+        function computerPlay(){
+            var dummyNum;
+            dummyNum=Math.floor(Math.random()*3)+1;
+            switch(dummyNum){
+                case 1:
+                return "ROCK";
+                break;
+                case 2:
+                return "PAPER";
+                break;
+                case 3:
+                return "SCISSORS";
+            }
+        }
+
+       
+        function player(){
+            pselect=window.prompt("enter choice","Rock");
+            return (pselect.toUpperCase());
+        }
+        function game(){
+            var pscore=0;
+            var cscore=0;
+
+            for(var i=0;i<5;i++){
+             var playerSelection=player();
+             const computerSelection=computerPlay();
+             console.log(playRound(playerSelection,computerSelection));
+            }
+            if(pscore>cscore){
+            console.log(`You're the ultimate winner. You beat computer ${pscore} - ${cscore}` )
+        } else if(cscore>pscore){
+            console.log(`Computer is the ultimate winner. You lost to computer ${pscore} - ${cscore}` )
+        } else{
+            console,log(`It's an ultimate tie! ${pscore}-${cscore}`)
+        }
+        
+         function playRound(ps,cs){
+            if(ps==cs){
+                return `It is a Tie.${ps} equals ${cs}. Computer score=${cscore} & Player score=${pscore}`;
+            } else if(ps=="ROCK"&& cs=="SCISSORS"){
+                pscore++;
+                return `You win. ${ps} beats ${cs}. Computer score=${cscore} & Player score=${pscore}`;
+            } else if(ps=="ROCK"&& cs=="PAPER"){
+                cscore++;
+                return `You lose. ${cs} beats ${ps}. Computer score=${cscore} & Player score=${pscore}`;
+            } else if(ps=="PAPER"&&cs=="ROCK"){
+                pscore++;
+                return `You win. ${ps} beats ${cs}. Computer score=${cscore} & Player score=${pscore}`;
+            } else if(ps=="PAPER"&&cs=="SCISSORS"){
+                cscore++;
+                return `You lose. ${cs} beats ${ps}. Computer score=${cscore} & Player score=${pscore}`;
+            } else if(ps=="SCISSORS"&&cs=="PAPER"){
+                pscore++;
+                return `You win. ${ps} beats ${cs}.  Computer score=${cscore} & Player score=${pscore}`;
+            } else {
+                cscore++;
+                return `You lose. ${cs} beats ${ps}. Computer score=${cscore} & Player score=${pscore}`;
+            }
+        }
+        }
+        game();
+
+    
+
+        
+    </script>
+    </html>
