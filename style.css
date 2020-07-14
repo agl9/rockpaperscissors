@@ -1,0 +1,65 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(128,0,32,75);
+}
+#stitle{
+    font-size: 2vw;
+    color: rgb(255, 217, 0);
+    }
+
+#title{
+    font-size: 3vw;
+    color: rgb(255, 217, 0);
+  }
+#scoreboard{
+    display: flex;
+    width:100%;
+    justify-content: space-around;
+    font-size:2vw;
+    color: rgb(180, 171, 152);
+    background-color: black;
+    text-align: center;
+}
+#scoreboard p{
+    font-size: 5vw;
+    color:white;
+    text-align: center;
+    margin: 0 auto;
+}
+#round-result{
+    font-size: 1.5vw;
+    color:white;
+}
+#choice{
+    font-size: 2vw;
+    color: rgb(255, 217, 0);
+    margin: 1vw 0.5vw;
+}
+
+.rpsbutton{
+    background-color:#7551e9;
+    border-color: #7551e9;
+    padding:0.5vw;
+    font-size: 1.5vw;
+    color: #eef;
+    border-radius: 40%;
+    margin: auto 3vw;
+}
+.rpsbutton:hover{
+    background-color: rgb(255, 217, 0);
+    border-color: rgb(255, 217, 0);
+    color:rgb(128,0,32);
+}
+#choice{
+    text-align: center;
+    margin: 1.5vw auto;
+}
+#result{
+    font-size: 3vw;
+    color: rgb(255, 217, 0);
+    margin: 1vw 0 0 0;
+    text-align: center;
+  }
